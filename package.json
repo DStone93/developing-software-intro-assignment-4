@@ -1,10 +1,12 @@
 {
   "name": "assignment4",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "build": "npm run build",
+    "build:compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/DStone93/developing-software-intro-assignment-4/issues"
   },
-  "homepage": "https://github.com/DStone93/developing-software-intro-assignment-4#readme"
+  "homepage": "https://github.com/DStone93/developing-software-intro-assignment-4#readme",
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
 }
