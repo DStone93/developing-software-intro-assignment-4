@@ -7,8 +7,10 @@
     "build:compile": "tsc",
     "start": "node dist/index.js",
     "lint": "eslint . --ext .ts",
+    "build:prettier": "prettier --write src/**/*.ts",
     "start:dev": "npm run start",
-    "start:dev:lint": "npm run build:compile && npm run start && npm run lint"
+    "start:dev:lint": "npm run build:compile && npm run start && npm run lint",
+    "build": "npm run lint && npm run build:prettier && npm run start && npm run build:compile"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "eslint": "^7.9.0",
+    "prettier": "2.1.2",
     "typescript": "^3.9.7"
   }
 }
