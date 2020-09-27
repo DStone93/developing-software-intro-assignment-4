@@ -1,16 +1,18 @@
 {
-  "name": "step3",
-  "version": "1.2.0",
+  "name": "step5",
+  "version": "1.4.0",
   "description": "This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.",
   "main": "index.js",
   "scripts": {
-    "build:compile": "tsc",
-    "start": "node dist/index.js",
     "lint": "eslint . --ext .ts",
-    "build:prettier": "prettier --write src/**/*.ts",
+    "start": "node dist/index.js",
     "start:dev": "npm run start",
     "start:dev:lint": "npm run build:compile && npm run start && npm run lint",
-    "build": "npm run lint && npm run build:prettier && npm run start && npm run build:compile"
+    "start:dev:notest": "npm run build:compile && npm run start",
+    "build": "npm run lint && npm run build:prettier && npm run test && npm run start && npm run build:compile",
+    "build:prettier": "prettier --write src/**/*.ts",
+    "build:compile": "tsc",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -23,10 +25,15 @@
   },
   "homepage": "https://github.com/DStone93/developing-software-intro-assignment-4#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
+    "chai": "^4.2.0",
     "eslint": "^7.9.0",
+    "mocha": "^8.1.3",
     "prettier": "2.1.2",
+    "ts-node": "^9.0.0",
     "typescript": "^3.9.7"
   }
 }
