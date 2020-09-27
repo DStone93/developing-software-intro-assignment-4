@@ -1,12 +1,14 @@
 {
-  "name": "assignment4",
-  "version": "1.1.0",
+  "name": "step3",
+  "version": "1.2.0",
   "description": "This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.",
   "main": "index.js",
   "scripts": {
+    "build:compile": "tsc",
     "start": "node dist/index.js",
-    "build": "npm run build",
-    "build:compile": "tsc"
+    "lint": "eslint . --ext .ts",
+    "start:dev": "npm run start",
+    "start:dev:lint": "npm run build:compile && npm run start && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,9 @@
   },
   "homepage": "https://github.com/DStone93/developing-software-intro-assignment-4#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
     "typescript": "^3.9.7"
   }
 }
