@@ -118,3 +118,44 @@ Added .prettierignore
 *  Commit your changes
 *  Push your feature branch to your remote repository
 *  Merge your feature branch into master using a Pull Request on Github
+---
+# Step 5
+* Cloned master from my respository
+* Created a new branch "feature/testing"
+* Install Mocha & chai
+```
+npm install chai mocha ts-node @types/chai @types/mocha --save-dev
+```
+*  Modified package.json to:
+
+    +  "lint": "eslint . --ext .ts",
+    +  "start": "node dist/index.js",
+    +  "start:dev": "npm run start",
+    +  "start:dev:lint": "npm run build:compile && npm run start && npm run lint",
+    +  "start:dev:notest": "npm run build:compile && npm run start",
+    +  "build": "npm run lint && npm run build:prettier && npm run test  && npm run start && npm run build:compile",
+    +  "build:prettier": "prettier --write src/**/*.ts",
+    +  "build:compile": "tsc",
+    +  "test": "mocha -r ts-node/register tests/**/*.spec.ts"
+
+*  A few of these could now be erased**
+
+*  Update version to 1.4.0
+
+## Step 5 Requirements:
+*  Checkout your master branch and pull the newest version from your remote repository
+*  Create a new branch called "feature/testing" and checkout this branch
+*  Add Mocha & Chai to your project
+*  Modify your NPM scripts so that you can, in one cli command each:
+   +  compile
+   +  start
+   +  lint
+   +  format
+   +  test
+   +  compile & run
+   +  lint, format, test, compile & run
+*  Update the readme.md
+*  Version your package
+*  Commit your changes
+*  Push your feature branch to your remote repository
+*  Merge your feature branch into master using a Pull Request on Github
