@@ -239,3 +239,23 @@ npm start --input --test
 *  Commit your changes
 *  Push your feature branch to your remote repository
 *  Merge your feature branch into master using a Pull Request on Github
+
+# Step 8:
+* Cloned from my master branch
+* Created new branch feature/module
+* Checked out feature/module
+* Npm install
+* Turns out I made step 7 into a module..
+* Updated version to 1.7.0
+
+## Step 8 requirements:
+* Checkout your master branch and pull the newest version from your remote repository
+* Create a new branch called "feature/module" and checkout this branch
+* Create a module with a single function that will console.log * "Hello" to the value of a parameter.
+* Incorporate the module into the file handling yargs
+* Write a test to validate that your function works as intended
+* Update the readme.md
+* Version your package
+* Commit your changes
+* Push your feature branch to your remote repository
+* Merge your feature branch into master using a Pull Request on Github
