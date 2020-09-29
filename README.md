@@ -213,3 +213,29 @@ Version your package
 Commit your changes
 Push your feature branch to your remote repository
 Merge your feature branch into master using a Pull Request on Github
+
+# Step 7:
+* Cloned master from my respository
+* Created a new branch "feature/yargs"
+* Checked out feature/yargs
+* Installed the stable version of yargs:
+```
+npm i yargs
+npm i @types/yargs --save-dev
+```
+To test the new command use:
+```
+npm start --input --test
+```
+*  Updated version to 1.6.0
+
+## Step 7 Requirements:
+*  Checkout your master branch and pull the newest version from your remote repository
+*  Create a new branch called "feature/yargs" and checkout this branch
+*  Add yargs to your project
+*  Setup yargs to accept a single parameter, and have your program console.log "Hello" and the value of the parameter.
+*  Update the readme.md
+*  Version your package
+*  Commit your changes
+*  Push your feature branch to your remote repository
+*  Merge your feature branch into master using a Pull Request on Github
